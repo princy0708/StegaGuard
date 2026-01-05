@@ -19,8 +19,7 @@ StegaGuard is an advanced **Machine Learning–based forensic tool** designed to
 ## 💻 Technologies Used
 
 - Python 3.13+  
- 
-- Scikit-learn  
+ - Scikit-learn  
 - OpenCV  
 - Librosa (audio processing)  
 - FFmpeg (video processing)  
