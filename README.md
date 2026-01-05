@@ -32,26 +32,22 @@ StegaGuard is an advanced **Machine Learning–based forensic tool** designed to
 ## 📦 Installation
 
 Follow these steps to set up **StegaGuard** locally:
-
-1. **Clone the repository:**
-
-```bash
+**Clone the repository:**
 git clone https://github.com/princy0708/StegaGuard.git
 cd StegaGuard
-Create a virtual environment (recommended):
-
+**Create a virtual environment**
 python3 -m venv venv
 source venv/bin/activate   # Linux / macOS
-venv\Scripts\activate      # Windows
 
-Install dependencies:
+
+**Install dependencies:**
 pip install -r requirements.txt
 Note: Ensure you have ffmpeg installed for video processing and librosa for audio processing. On Linux:
 sudo apt update
 sudo apt install ffmpeg
-🛠 Usage
+**🛠 Usage**
 Run StegaGuard on any file (image, audio, video):
 python3 run_stegaguard.py <file_path>
-⚠️ Disclaimer
+**⚠️ Disclaimer**
 
 This tool is intended for educational and forensic research purposes only. Do not use it to access or manipulate files without authorization.
