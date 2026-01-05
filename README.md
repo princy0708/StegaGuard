@@ -28,11 +28,13 @@ StegaGuard is an advanced **Machine Learning–based forensic tool** designed to
 - Git for version control  
 
 ---
-
 ## 📦 Installation
 
 Follow these steps to set up **StegaGuard** locally:
-1.**Clone the repository:**
+
+1. **Clone the repository:**
+
+```bash
 git clone https://github.com/princy0708/StegaGuard.git
 cd StegaGuard
 2. **Create a virtual environment**
