@@ -1,54 +1,148 @@
-# StegaGuard 🔍 – Universal Steganography Detection Tool
+# StegaGuard 🔍
+### Universal Steganography Detection Tool
 
-StegaGuard is an advanced **Machine Learning–based forensic tool** designed to detect steganography in **images, audio, and video files**. It analyzes real-world files, generates SHA256 hashes for integrity verification, and produces confidence-based forensic reports.
+> *Detect what the naked eye can't see.*
 
----
-
-## 🌟 Features
-
-- ✅ Detects steganography in **images (PNG, JPG)**  
-- ✅ Detects steganography in **audio files (MP3, WAV)**  
-- ✅ Detects steganography in **video files (MP4, AVI)**  
-- ✅ Generates **SHA256 hash** for file integrity  
-- ✅ Produces **forensic-style reports** with confidence scores  
-- ✅ Designed to work on **real-world files**, not only datasets  
-- ✅ Fully implemented in **Python** with ML models  
+StegaGuard is an advanced **ML-based forensic tool** that detects hidden data concealed within images, audio, and video files. It generates SHA256 integrity hashes and produces confidence-based forensic reports — built for real-world files, not just controlled datasets.
 
 ---
 
-## 💻 Technologies Used
+## Features
 
-- Python 3.13+  
- - Scikit-learn  
-- OpenCV  
-- Librosa (audio processing)  
-- FFmpeg (video processing)  
-- NumPy / Pandas  
-- Git for version control  
+| Capability | Details |
+|---|---|
+| 🖼️ Image Analysis | PNG, JPG — pixel-level steganalysis |
+| 🎵 Audio Analysis | MP3, WAV — spectral feature extraction |
+| 🎬 Video Analysis | MP4, AVI — frame-by-frame detection |
+| 🔐 Hash Verification | SHA256 integrity check on every file |
+| 📄 Forensic Reports | Confidence scores + detection summary |
+| 🌍 Real-World Ready | Works on uncontrolled, live files |
 
 ---
-## 📦 Installation
 
-Follow these steps to set up **StegaGuard** locally:
+## How It Works
 
-1. **Clone the repository:**
+```
+Input File (image / audio / video)
+        ↓
+Feature Extraction
+(pixel stats / spectral analysis / frame sampling)
+        ↓
+ML Classification Model
+        ↓
+Confidence Score + SHA256 Hash
+        ↓
+Forensic Report Output
+```
 
+---
+
+## Tech Stack
+
+```txt
+Language    : Python 3.13+
+ML          : Scikit-learn
+Vision      : OpenCV
+Audio       : Librosa
+Video       : FFmpeg
+Data        : NumPy · Pandas
+Version Ctrl: Git
+```
+
+---
+
+## Installation
+
+**1. Clone the repository**
 ```bash
 git clone https://github.com/princy0708/StegaGuard.git
 cd StegaGuard
-2. **Create a virtual environment**
+```
+
+**2. Create a virtual environment**
+```bash
 python3 -m venv venv
-source venv/bin/activate   # Linux / macOS
+source venv/bin/activate      # Linux / macOS
+venv\Scripts\activate         # Windows
+```
 
-
-3.**Install dependencies:**
+**3. Install dependencies**
+```bash
 pip install -r requirements.txt
-Note: Ensure you have ffmpeg installed for video processing and librosa for audio processing. On Linux:
-sudo apt update
-sudo apt install ffmpeg
-4.**🛠 Usage**
-Run StegaGuard on any file (image, audio, video):
-python3 run_stegaguard.py <file_path>
-5.**⚠️ Disclaimer**
+```
 
-This tool is intended for educational and forensic research purposes only. Do not use it to access or manipulate files without authorization.
+**4. Install system dependencies**
+```bash
+# FFmpeg (required for video processing)
+sudo apt update && sudo apt install ffmpeg
+
+# Verify installation
+ffmpeg -version
+```
+
+---
+
+## Usage
+
+```bash
+python3 run_stegaguard.py <file_path>
+```
+
+**Examples:**
+```bash
+# Analyze an image
+python3 run_stegaguard.py sample.png
+
+# Analyze an audio file
+python3 run_stegaguard.py recording.wav
+
+# Analyze a video
+python3 run_stegaguard.py clip.mp4
+```
+
+**Sample output:**
+```
+[StegaGuard] Analyzing: sample.png
+[✓] SHA256: 3a1f9c2e...
+[✓] Feature extraction complete
+[!] Steganography DETECTED — Confidence: 91.4%
+[✓] Forensic report saved: report_sample.txt
+```
+
+---
+
+## Project Structure
+
+```
+StegaGuard/
+├── run_stegaguard.py      # Main entry point
+├── models/                # Trained ML models
+├── detectors/             # Image, audio, video modules
+├── reports/               # Generated forensic reports
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## Use Cases
+
+- 🔍 Digital forensics investigations
+- 🛡️ Malware C2 payload detection
+- 🎓 Cybersecurity research & CTF challenges
+- 🏛️ Law enforcement evidence analysis
+
+---
+
+## ⚠️ Disclaimer
+
+This tool is intended for **educational and forensic research purposes only.**
+Do not use StegaGuard to access or analyze files without proper authorization.
+The author is not responsible for any misuse of this tool.
+
+---
+
+## Author
+
+**Princy Chauhan**
+[GitHub](https://github.com/princy0708) · [LinkedIn](https://linkedin.com/in/princy-chauhan-065236373)
